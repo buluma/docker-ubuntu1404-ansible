@@ -18,7 +18,7 @@ RUN apt-get update \
 
 # Install Ansible via Pip.
 ADD https://bootstrap.pypa.io/get-pip.py .
-RUN /usr/bin/python3.6 get-pip.py \
+RUN /usr/bin/python2.7 get-pip.py \
   && pip install $pip_packages
 
 # Install Ansible inventory file.
