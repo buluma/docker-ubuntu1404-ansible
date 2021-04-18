@@ -6,12 +6,11 @@ ENV pip_packages "ansible"
 # Install dependencies and upgrade Python.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+       locales \
+       python-software-properties \
        software-properties-common \
-    && add-apt-repository ppa:deadsnakes/ppa \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-       python2.7 \
-    && ln -s /usr/bin/python2.7 /usr/bin/python \
+       python-setuptools \
+       wget rsyslog systemd systemd-cron sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean \
@@ -19,9 +18,10 @@ RUN apt-get update \
     && python get-pip.py
 
 # Install Ansible via Pip.
-ADD https://bootstrap.pypa.io/get-pip.py .
-RUN /usr/bin/python2.7 get-pip.py \
-  && pip install $pip_packages
+# ADD https://bootstrap.pypa.io/get-pip.py .
+# RUN /usr/bin/python2.7 get-pip.py \
+#   && pip install $pip_packages
+RUN pip install $pip_packages
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
