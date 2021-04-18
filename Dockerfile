@@ -14,7 +14,9 @@ RUN apt-get update \
     && ln -s /usr/bin/python2.7 /usr/bin/python \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
-    && apt-get clean
+    && apt-get clean \
+    && wget https://bootstrap.pypa.io/pip/2.7/get-pip.py \
+    && python get-pip.py
 
 # Install Ansible via Pip.
 ADD https://bootstrap.pypa.io/get-pip.py .
