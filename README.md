@@ -1,6 +1,6 @@
 # Ubuntu 14.04 LTS (Trusty) Ansible Test Image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/buluma/docker-ubuntu1404-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/buluma/docker-ubuntu1404-ansible/) [![Build Status](https://travis-ci.org/buluma/docker-ubuntu1404-ansible.svg?branch=master)](https://travis-ci.org/buluma/docker-ubuntu1404-ansible) [![HitCount](http://hits.dwyl.com/buluma/docker-ubuntu1404-ansible.svg)](http://hits.dwyl.com/buluma/docker-ubuntu1404-ansible)
+[![Docker Automated build](https://img.shields.io/docker/automated/buluma/docker-ubuntu1404-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/buluma/docker-ubuntu1404-ansible/) [![Build Status](https://travis-ci.com/buluma/docker-ubuntu1404-ansible.svg?branch=master)](https://travis-ci.com/buluma/docker-ubuntu1404-ansible) [![HitCount](http://hits.dwyl.com/buluma/docker-ubuntu1404-ansible.svg)](http://hits.dwyl.com/buluma/docker-ubuntu1404-ansible)
 
 Ubuntu 14.04 LTS (Trusty) Docker container for Ansible playbook and role testing.
 
