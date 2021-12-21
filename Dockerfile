@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM buluma/ubuntu:14.04
 LABEL maintainer="Michael Buluma"
 
 ENV pip_packages "ansible"
