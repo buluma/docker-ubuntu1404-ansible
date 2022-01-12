@@ -16,6 +16,9 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
+# Check Pip/Python Version
+RUN python --version && pip --version
+
 # Install Ansible via Pip.
 # ADD https://bootstrap.pypa.io/get-pip.py .
 # RUN /usr/bin/python3.5 get-pip.py \
