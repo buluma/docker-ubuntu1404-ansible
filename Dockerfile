@@ -20,7 +20,7 @@ RUN apt-get update \
 # ADD https://bootstrap.pypa.io/get-pip.py .
 # RUN /usr/bin/python3.5 get-pip.py \
 #  && pip3 install $pip_packages
-RUN pip install $pip_packages
+RUN pip3 install $pip_packages
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
