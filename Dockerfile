@@ -10,7 +10,7 @@ RUN apt-get update \
        python3-software-properties \
        software-properties-common \
        python3-pip python3-dev \
-       python3-setuptools \
+       setuptools-39.1.0 \
        wget sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
