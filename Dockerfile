@@ -7,10 +7,10 @@ ENV pip_packages "ansible"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        locales \
-       python-software-properties \
+       python3-software-properties \
        software-properties-common \
        python3-pip python3-dev \
-       python-setuptools \
+       python3-setuptools \
        wget sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
