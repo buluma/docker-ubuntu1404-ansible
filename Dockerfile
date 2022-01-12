@@ -9,18 +9,19 @@ RUN apt-get update \
        locales \
        python-software-properties \
        software-properties-common \
+       python3-pip python3-dev \
        python-setuptools \
        wget sudo iproute2 \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean \
     && wget https://bootstrap.pypa.io/pip/3.5/get-pip.py \
-    && python get-pip.py
+    && python3 get-pip.py 
 
 # Install Ansible via Pip.
 ADD https://bootstrap.pypa.io/get-pip.py .
-RUN /usr/bin/python2.7 get-pip.py \
-  && pip install $pip_packages
+RUN /usr/bin/python3.5 get-pip.py \
+  && pip3 install $pip_packages
 # RUN pip install $pip_packages
 
 # Install Ansible inventory file.
